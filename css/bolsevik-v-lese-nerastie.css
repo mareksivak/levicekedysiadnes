@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    transition: 0.2s;
+}
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+input:active, 
+input:focus {
+    outline:none;
+}
+
+body {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+    min-height: 100vh;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'futura-pt', sans-serif;
+}
+
+.container {
+    margin:0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.row {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0rem;
+}
+
+.twentytwenty-wrapper, #photos img
+{
+    width:100%;
+    max-width: 800px;
+}
+
+.twentytwenty-wrapper img2
+{
+    max-width: 100%;
+}
+
+.twentytwenty-wrapper
+{
+    margin: 0 auto;
+}
+
+.content {
+    padding: 3rem 0;
+    
+    margin-bottom:0rem;
+}
+
+h1
+{
+    text-align: center;
+    font-weight: 300;
+    color: #A7606C;
+    
+    margin: 3rem 0;
+    position: absolute;
+    top:-10000px;
+    left: 10000px;
+}
+
+a {
+    color: #A7606C;
+    
+}
+
+a.fancy {
+    background: #F3D5DA;
+    text-decoration: none;
+    padding: 0 0.15rem;
+}
+
+a.fancy:hover {
+    background: #F3C2C2;
+}
+
+.hero {
+    background: #F3A285;
+    margin-bottom: 3rem;
+}
+
+.hero--title {
+    text-align: center;
+}
+
+.logo {
+    width: 10rem;
+    margin: 4rem auto;
+}
+
+.about-btn {
+    margin-top:2rem;
+    text-align: right;
+}
+
+.about-btn a {
+    text-decoration: none;
+    color: #b25736;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.about-btn a:hover {
+    opacity: 0.8;
+}
+
+.about-btn a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #b25736;
+    content: ' ';
+}
+.about-btn a:hover:after {
+    bottom: -0.5rem;
+    transition: 0.2s;
+    background: #C57A5F;
+}
+
+.levice-photo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8rem;
+    background: #EEE;
+    max-width: 800px;
+    
+    position: relative;
+}
+
+.twentytwenty-wrapper {
+    position: absolute;
+}
+
+.photo-loading2 .levice-photo--comment {
+    padding-top: 62.5%;
+}
+.levice-photo--comment {
+    margin-top: 62.5%;
+}
+.photo-loading img {
+    display: none;   
+}
+
+.levice-photo--comment {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem;
+    background: #25161B;
+    color: #FDEDE7;
+}
+
+.levice-photo--comment .comment-text {
+    padding-bottom: 0rem;
+}
+
+.crowdsourcing {
+    color: #ADA09E;
+}
+
+.crowdsourcing a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.crowdsourcing a:hover {
+    color: #F3A285;
+}
+.levice-photo--comment .comment-date {
+    font-size: 0.75rem;
+    color: #ADA09E;
+    display: none;
+}
+
+#empty-state {
+    display: none;
+    transition: 0.2s;
+}
+
+#waypoint-autoload {
+  
+}
+
+input {
+    font-family: 'futura-pt';
+}
+
+.button {
+    color: #fff;
+    background: #C57A5F;
+    cursor:pointer; 
+    text-align:center;
+    font-size:1.25rem;
+    line-height:3rem;
+    height:3rem;
+    width:100%;
+    border:none
+}
+
+.button:hover {
+    background: #dc8b6e;
+}
+
+.button:focus {
+    background: #F3A285;
+}
+
+.email {
+    font-size:1.25rem;
+    border:none;
+    padding:0 2rem;
+    background: rgba(0,0,0,0.05); 
+    height: 3rem; 
+    width:100%;
+}
+
+#loading-photos {
+    cursor:pointer;
+    padding:2rem;
+    background: rgba(0,0,0,0.0);
+    text-align:center;
+    color:#CCC;
+    opacity: 0;
+}
+.empty-state {
+    padding:3rem 0;
+    border-top:2px solid #CCC; 
+    padding-top: 0rem;
+}
+
+#btn-autoload {
+    cursor:pointer;
+    padding:2rem;
+    background: rgba(0,0,0,0.15); 
+    text-align:center;
+    display:none;
+}
+
+#waypoint-autoload {
+    padding:2rem;
+    margin-bottom:5rem; 
+    text-align:center;
+}
+
+.title {
+    font-weight: 400;
+    color: #C57A5F;
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+}
+
+.about__header {
+    background: #F3A285;
+}
+
+.about .container {
+    max-width:100%;
+    width: 600px;
+}
+
+img.about--logo {
+    width: 8rem;
+    padding: 2rem 0;
+}
+
+.about .button {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.paragraph {
+    margin-bottom: 1.75rem;
+    font-size: 1.25rem;
+}
