@@ -72,17 +72,18 @@ function calltwenty(response){
 
 function loadPhotos(){
     var oldId = lastId; 
+    var response;
     
     var loadedPhotos = $('#photos').find('.levice-photo').children();
     
     if (loadedPhotos.length > 0) {
-        console.log("naladovane " + loadedPhotos.length);
+        //console.log("naladovane " + loadedPhotos.length);
         lastId = $('#photos .levice-photo').last().attr('id').substring("levice-photo-".length);
     }
     else {
         lastId = -1;   
     }
-    console.log(lastId + " " + oldId);
+    //console.log(lastId + " " + oldId);
     if (oldId != lastId) {
         if (showLoadBtn) $('#btn-autoload').hide();
         //$('#loading-photos').show();
@@ -91,7 +92,9 @@ function loadPhotos(){
 
 
         console.log('volam 20');
-        get('append_photo.php?q=' + lastId).then(calltwenty);
+        //get('append_photo.php?q=' + lastId).then(calltwenty); // old database input
+        response = generatePhotos(lastId); //.then(calltwenty); // new input -> prudy-lav.js
+        calltwenty(response);
     }
     else {
         // vsetko uz je nacitane
@@ -103,6 +106,8 @@ function loadPhotos(){
         
     }
 }
+
+
 
 function initWaypoint() {
  console.log('vytvaram waypoint');
